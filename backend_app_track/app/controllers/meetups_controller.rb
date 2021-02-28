@@ -5,6 +5,12 @@ class MeetupsController < ApplicationController
         render json: meetup
     end 
 
+    def update
+        meetup = Meetup.find_by(id: params[:id])
+        meetup.update(meetup_params)
+        render json: meetup
+    end
+
     private 
     
     def meetup_params

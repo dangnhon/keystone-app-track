@@ -1,5 +1,10 @@
 class MeetupsController < ApplicationController
 
+    def index 
+        meetups = Meetup.all 
+        render json: meetups
+    end 
+
     def create 
         meetup = Meetup.create(meetup_params)
         render json: meetup

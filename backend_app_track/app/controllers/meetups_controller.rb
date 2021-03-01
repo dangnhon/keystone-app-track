@@ -16,6 +16,12 @@ class MeetupsController < ApplicationController
         render json: meetup
     end
 
+    def destroy
+        meetup = Meetup.find_by(id: params[:id])
+        meetup.destroy
+        render json: {message: 'Your meetup has been deleted'}
+    end 
+
     private 
     
     def meetup_params

@@ -1,6 +1,5 @@
 class JobsController < ApplicationController
 
-
     def index
         jobs = Job.all 
         render json: jobs  
@@ -15,6 +14,12 @@ class JobsController < ApplicationController
         job = Job.find_by(id: params[:id])
         job.update(job_params)
         render json: job
+    end
+
+    def destroy
+        job = Job.find_by(id: params[:id])
+        job.destroy
+        render json: {message: 'Your job app has been deleted'}
     end
 
     private 

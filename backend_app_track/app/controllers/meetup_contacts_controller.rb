@@ -9,6 +9,12 @@ class MeetupContactsController < ApplicationController
         render json: contact
     end 
 
+    def update
+        contact = MeetupContact.find_by(id: params[:id])
+        contact.update(contact_params)
+        render json: contact
+    end
+
     private 
     
     def contact_params

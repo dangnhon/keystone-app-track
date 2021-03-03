@@ -10,6 +10,13 @@ class TasksController < ApplicationController
         render json: task
     end 
 
+
+    def update
+        task = Task.find_by(id: params[:id])
+        task.update(task_params)
+        render json: task
+    end
+
     private 
     
     def task_params

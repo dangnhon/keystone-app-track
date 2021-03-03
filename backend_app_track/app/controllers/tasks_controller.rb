@@ -17,6 +17,13 @@ class TasksController < ApplicationController
         render json: task
     end
 
+
+    def destroy
+        task = Task.find_by(id: params[:id])
+        task.destroy
+        render json: {message: 'Your job task has been deleted'}
+    end
+
     private 
     
     def task_params

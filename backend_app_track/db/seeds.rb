@@ -1,8 +1,8 @@
 
 Task.delete_all 
 Job.delete_all 
-Meetup.delete_all
 MeetupContact.delete_all
+Meetup.delete_all
 User.delete_all 
 
 u1 = User.create(name: "john smith", email: "john_smith@gmail.com", password: "test")

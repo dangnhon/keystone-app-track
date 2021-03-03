@@ -15,6 +15,12 @@ class MeetupContactsController < ApplicationController
         render json: contact
     end
 
+    def destroy
+        contact = MeetupContact.find_by(id: params[:id])
+        contact.destroy
+        render json: {message: 'Your job task has been deleted'}
+    end
+
     private 
     
     def contact_params

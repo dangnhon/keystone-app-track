@@ -5,4 +5,5 @@ class User < ApplicationRecord
     has_many :meetup_contacts, through: :meetups
     has_secure_password
     validates :email, uniqueness: { case_sensitive: false }
+    validates :name, :email, :password, presence: true
 end

@@ -14,8 +14,4 @@ contact1 = MeetupContact.create(name: "Bill Gates", phone_number: "315-777-9999"
 
 
 
-
-
-
-
 puts "Done seeding!"

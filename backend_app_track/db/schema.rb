@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 2021_02_24_213530) do
     t.string "job_title"
     t.string "date"
     t.string "salary"
-    t.boolean "status", default: false
+    t.string "status"
     t.text "note"
     t.string "contact_number"
     t.bigint "user_id", null: false

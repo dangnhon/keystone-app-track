@@ -5,7 +5,7 @@ class CreateJobs < ActiveRecord::Migration[6.1]
       t.string :job_title
       t.string :date
       t.integer :salary
-      t.boolean :status
+      t.string :status
       t.text :note
       t.string :contact_number
       t.references :user, null: false, foreign_key: true
